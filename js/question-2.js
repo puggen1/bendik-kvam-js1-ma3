@@ -32,7 +32,7 @@ function displayApi(api) {
       </div>`;
   }
   //adding a message when it did as intended:
-  //originaly this message said how many games it was showing, but when i read we only should show the 8 first, i removed it so it didnt how the wrong amount( i used api.length).
+  //originaly this message said how many games it was showing, but when i read we only should show the 8 first, i removed it so it didnt show the wrong amount( i used api.length).
   info.innerHTML = `<div class="successContainer">
   <p>Success! Showing games: </p>
   </div>`;
@@ -43,7 +43,7 @@ function displayApi(api) {
 function showError(error) {
   info.innerHTML = `<div class="errorcontainer"><p>Something went wrong. ${error}</p></div>`;
   //removing loader here when error, since it only removes loader when successful because of container.innerHTML = html
-  // i could also use a += and remove loader on finally... i tried this, but for some reason nothing happend and im not so sure why.
+  // i could also use a += and remove loader on .finally... i tried this, but for some reason nothing happend and im not so sure why.
   container.innerHTML = "";
 }
 
