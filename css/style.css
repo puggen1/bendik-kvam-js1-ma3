@@ -7,21 +7,64 @@
   }
 }
 
-.error {
+.errorcontainer,
+.successContainer,
+.game {
+  display: flex;
+
+  margin: 20px;
 }
-.success {
+.errorcontainer p,
+.successContainer p {
+  margin: 5px;
+}
+
+.errorcontainer {
+  border: solid rgb(226, 1, 1) 2px;
+  background-color: rgba(255, 0, 0, 0.644);
+  min-height: 30px;
+  width: 400px;
+}
+.successContainer {
+  border: solid rgb(60, 255, 0) 2px;
+  background-color: rgb(109, 255, 109);
+  height: 30px;
 }
 
 .loading {
+  width: 56px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+.name {
+  font-size: 20px;
 }
 .loader {
   height: 50px;
   width: 50px;
-  border: solid lightgray 3px;
+  border: 3px solid lightgray;
   border-bottom: none;
+  border-right: none;
   border-radius: 50%;
   animation-name: loader;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 100px;
+}
+.game {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  width: 300px;
+  border-radius: 20px;
+  margin: 10px 50px;
+  background-color: rgb(226, 226, 226);
 }
